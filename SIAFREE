@@ -24,30 +24,3 @@ wget  -S  -N -r ftp://USER:PASSWD@dcs1.volkswagen.com.br:990/RECEIVE/*
 #...o arquivo as 6:30 coloquei executar att as 8h 
 find . -mtime 0 -exec cp "{}" /path/da/pasta/${data_dn} \;
 ##EOF
-
-#!/bin/bash
-######################################################################
-##### SCRIPT IMPLEMENTADO POR CHRISTIAN - FROM HELL MODA FUCKERS #####
-######################################################################
-### DON'T REMOVE THE CREDITS BITCH!! #################################
-######################################################################
-#LOGFILE="/var/log/${0##*/}".log
-#Habilita o log copiando a saida padrÃ£o para o arquivo LOGFILE
-#exec 1> >(tee -a "$LOGFILE")
-#Faz o mesmo para a saÃ­da de ERROS
-#exec 2>&1
-# A linha abaixo so deve ser descomentada para Debug do Script
-#set -x
-
-data_dn=`date +%d%m%g`
-
-#ENTRAR NO DIRETORIO AONDE ESTÃƒO OS ARQUIVOS BAIXADOS PELO WGET
-#Criei a pasta SINCRO_PRIV pois lá vai ser o repo dos arquivos do sia
-cd /home/user/SINCRO_PRIV/
-## Lembrando que nessa parte ele sincroniza os arquivos diÃ¡rios por data
-wget  -S  -N -r ftp://USER:PASSWD@dcs1.volkswagen.com.br:990/RECEIVE/*
-
-#Essa parte Ã© importante cuidar a hora de execuÃ§Ã£o do script pois o sia libera
-#...o arquivo as 6:30 coloquei executar att as 8h 
-find . -mtime 0 -exec cp "{}" /path/da/pasta/${data_dn} \;
-##EOF
