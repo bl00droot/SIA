@@ -1,9 +1,4 @@
 #!/bin/bash
-######################################################################
-##### SCRIPT IMPLEMENTADO POR CHRISTIAN - FROM HELL MODA FUCKERS #####
-######################################################################
-### DON'T REMOVE THE CREDITS BITCH!! #################################
-######################################################################
 #LOGFILE="/var/log/${0##*/}".log
 #Habilita o log copiando a saida padrÃ£o para o arquivo LOGFILE
 #exec 1> >(tee -a "$LOGFILE")
